@@ -1,3 +1,12 @@
+.mainlogo {
+  color: white;
+  margin-left: 17%;
+}
+
+.favoritezone {
+  margin-left: 35%;
+}
+
 input[id="menuicon"] {
   display:none;
 }
@@ -17,7 +26,7 @@ input[id="menuicon"] + label span {
   width:100%;
   height:5px;
   border-radius:30px;
-  background:#000;
+  background: white;
   transition:all .35s;
 }
 
@@ -89,13 +98,17 @@ input[id="menuicon"]:checked + label + div {
 /* 로그인 페이지 css*/
 
 .loginbd{
-font-family: 'Poppins', sans-serif;
-font-weight: 300;
-font-size: 15px;
-line-height: 1.7;
-color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: white;
   background-color: black;
-overflow-x: hidden;
+  overflow-x: hidden;
+}
+
+.indexbd{
+  background-color: black;
 }
 
 a:hover {
@@ -369,7 +382,163 @@ display: block;
 }
 
 
+/* 서울주차장 지도 내위치 버튼*/
+.mapbtn {
+  font-size: 25px;
+  margin-left: 20px;
+  padding: 15px 30px;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  border-radius: 30px;
+  font-family: sans-serif;
+  transition: all 0.4s;
+}
 
+.mapbtn:hover {
+  background-color: black;
+  color: white;
+}
 
+/* 주차장 목록 공간, 단속구간 목록 공간*/
+
+/*.container {
+  border: 2px solid green;
+  width: 800px;
+  height: 800px;
+}*/
+
+.map-wrap{
+  width: 800px;
+  height: 800px;
+}
+
+.parkingzone {
+  position: absolute;
+  border: 2px solid blue;
+  right: 0;
+}
+
+.crackzone {
+  border: 2px solid red;
+}
+
+.container-4{
+  overflow: hidden;
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-top: 25%;
+  margin-left: 30%;
+}
+
+.container-4 input#search{
+  width: 300px;
+  height: 50px;
+  background: #2b303b;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #fff;
+  padding-left: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.container-4 input#search::-webkit-input-placeholder {
+  color: #65737e;
+}
+
+.container-4 input#search:-moz-placeholder { /* Firefox 18- */
+  color: #65737e;  
+}
+
+.container-4 input#search::-moz-placeholder {  /* Firefox 19+ */
+  color: #65737e;  
+}
+
+.container-4 input#search:-ms-input-placeholder {  
+  color: #65737e;  
+}
+
+.container-4 button.icon{
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+ 
+  border: none;
+  background: #232833;
+  height: 50px;
+  width: 50px;
+  color: #4f5b66;
+  opacity: 0;
+  font-size: 10pt;
+ 
+  -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -ms-transition: all .55s ease;
+  -o-transition: all .55s ease;
+  transition: all .55s ease;
+}
+
+.container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon{
+  outline: none;
+  opacity: 1;
+  margin-left: -50px;
+}
+
+.container-4:hover button.icon:hover{
+  background: white;
+}
+
+/*.guzone {
+  position: absolute;
+  margin-top: 20%;
+  margin-left: 30%;
+  width: 150px;
+  height: 35px;
+  border-radius: 4px;
+  border: 2px solid white;
+}
+
+.guzone .guselect {
+  width: inherit;
+  height: inherit;
+  background: black;
+  color: white;
+  font-size: 16px;
+  border: 0 none;
+  outline: 0 none;
+  padding: 0 5px;
+  position: relative;
+  z-index: 3;
+}
+
+.dongzone {
+  position: absolute;
+  margin-top: 20%;
+  margin-left: 40%;
+  width: 150px;
+  height: 35px;
+  border-radius: 4px;
+  border: 2px solid white;
+}
+
+.dongzone .dongselect {
+  width: inherit;
+  height: inherit;
+  background: black;
+  color: white;
+  font-size: 16px;
+  border: 0 none;
+  outline: 0 none;
+  padding: 0 5px;
+  position: relative;
+  z-index: 3;
+}*/
 
 
