@@ -103,6 +103,9 @@ router.get('/', function(req, res, next) {
                         <div class="monthcharge">
                             월 요금    : ${docs[i]['mpf']}
                         </div>
+                        <div class="mappage">
+                          <a href="/map">지도보기</a>
+                        </div>
                     <div class="head">
                       <div class="btn-close" onclick="closepopup();"></div>
                     </div>
