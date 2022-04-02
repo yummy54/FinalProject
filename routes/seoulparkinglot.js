@@ -26,7 +26,7 @@ var SeoulParkingSchema = mongoose.Schema({
 var SeoulParking = mongoose.model('SeoulParking', SeoulParkingSchema);
 
 router.get('/', function(req, res, next) {
-  SeoulParking.find({},{_id : 0},function(err,docs){
+  SeoulParking.find({},{_id : 0, latitude : 0, longitude : 0},function(err,docs){
     if(err) console.log('err');
 //    console.log(docs[0].name);
     var template = `
@@ -39,10 +39,11 @@ router.get('/', function(req, res, next) {
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <script>
     function openpopup(i) {
-      $('.popup').css('opacity', '1');
-      $('.popup').css('visibility', 'visible');
+      $('.popup:eq('+i+')').css('opacity', '1');
+      $('.popup:eq('+i+')').css('visibility', 'visible');
     }
 
     function closepopup() {
@@ -56,7 +57,7 @@ router.get('/', function(req, res, next) {
   <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-6 text-center mb-5">
-              <h2 class="heading-section">강남구 주차장</h2>
+              <h2 class="heading-section">서울 주차장</h2>
           </div>
         </div>
        <div class="row">
@@ -76,40 +77,40 @@ router.get('/', function(req, res, next) {
                 <div class="popup">
                   <div class="popup-content">
                         <div class="parkingnum">
-                            주차대수 : ${docs[i]['num']}
+                            주차구획수 : ${docs[i]['num']}
                         </div>
                         <div class="parkingopday">
-                            운영요일 : ${docs[i]['opday']}
+                            운영요일   : ${docs[i]['opday']}
                         </div>
                         <div class="weekdaystart">
-                            평일시작 : ${docs[i]['wds']}
+                            평일시작   : ${docs[i]['wds']}
                         </div>
                         <div class="weekdayend">
-                            평일종료 :  ${docs[i]['wde']}
+                            평일종료   :  ${docs[i]['wde']}
                         </div>
                         <div class="holidaystart">
-                            주말시작 : ${docs[i]['hds']}
+                            주말시작   : ${docs[i]['hds']}
                         </div>
                         <div class="holidayend">
-                            주말종료 : ${docs[i]['hde']}
+                            주말종료   : ${docs[i]['hde']}
                         </div>
                         <div class="standardtime">
-                            기본시간 : ${docs[i]['bpt']}
+                            기본시간   : ${docs[i]['bpt']}
                         </div>
                         <div class="standardcharge">
-                            기본요금 : ${docs[i]['bpf']}
+                            기본요금   : ${docs[i]['bpf']}
                         </div>
                         <div class="monthcharge">
-                            월 요금 : ${docs[i]['mpf']}
+                            월 요금    : ${docs[i]['mpf']}
                         </div>
                     <div class="head">
-                      <div class="btn-close" onclick="closepopup();">X</div>
+                      <div class="btn-close" onclick="closepopup();"></div>
                     </div>
                         <div class="body">
                           <tbody>
                             <tr>
                               <th scope="row">${i + 1}</th>
-                              <td><button type="submit" name="parkingname" value=${docs[i]['name']}>down</button></td>
+                              <td style="cursor:pointer;" onclick="openpopup(${i});">${docs[i]['name']}</td>
                               <td>${docs[i]['address']}</td>
                               <td>${docs[i]['dong']}</td>
                             </tr>
