@@ -15,6 +15,7 @@ var incheoncctvRouter       = require('./routes/incheoncctv');
 var searchseoulRouter       = require('./routes/searchseoul');
 var mapRouter               = require('./routes/map');
 var ownparkRouter           = require('./routes/ownpark');
+var leafletmapRouter        = require('./routes/leafletmap');
 
 var app = express();
 app.use(bodyParser.json())
@@ -40,6 +41,7 @@ app.use('/incheoncctv', incheoncctvRouter);
 app.use('/searchseoul', searchseoulRouter);
 app.use('/map', mapRouter);
 app.use('/ownpark', ownparkRouter);
+app.use('/leafletmap', leafletmapRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
