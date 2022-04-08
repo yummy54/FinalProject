@@ -6,21 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login page</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'><link rel="stylesheet" href="stylesheets/style.css">
+    <link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'><link rel="stylesheet" href="stylesheets/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">  
-<style>
-    	h2 { text-align: left; }
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="loginbd">
+<body class="loginbackground">
+		<a href="/"><img src="images/parkinglogo.png" width="300" height="300"></a>
+		<!--<div class="loginbd">
 	<div class="section">
 		<div class="container">
 			<div class="row full-height justify-content-center">
 				<div class="col-12 text-center align-self-center py-5">
-                    <h2><a href="/">LOGO</a></h2>
 					<div class="section pb-5 pt-5 pt-sm-2 text-center">
 						<h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
 			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
@@ -81,7 +78,26 @@
 	      	</div>
 	    </div>
 	</div>
-</div>
+</div>-->
 
+<div class="center">
+	<h1>Login</h1>
+	<form method="post">
+		<div class="txt_field">
+			<input type="text" required>
+			<span></span>
+			<label>ID</label>
+		</div>
+		<div class="txt_field">
+			<input type="password" required>
+			<span></span>
+			<label>Password</label>
+		</div>
+		<input type="submit" value="Login">
+		<div class="signup_link">
+			아직 회원이 아니신가요?<a href="/signup"> 가입하기</a>
+		</div>
+	</form>
+</div>
 </body>
 </html>

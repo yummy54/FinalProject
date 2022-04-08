@@ -8,13 +8,16 @@ var bodyParser = require('body-parser')
 var indexRouter             = require('./routes/index');
 var usersRouter             = require('./routes/users');
 var loginRouter             = require('./routes/login');
-var seoulparkinglotRouter   = require('./routes/seoulparkinglot');
-var incheonparkinglotRouter = require('./routes/incheonparkinglot');
+var welcomeRouter           = require('./routes/welcome');
+var signupRouter            = require('./routes/signup');
+var nearbyparkinglotRouter  = require('./routes/nearbyparkinglot');
+var destinationRouter    = require('./routes/destination');
 var seoulcctvRouter         = require('./routes/seoulcctv');
 var incheoncctvRouter       = require('./routes/incheoncctv');
 var searchseoulRouter       = require('./routes/searchseoul');
 var mapRouter               = require('./routes/map');
 var ownparkRouter           = require('./routes/ownpark');
+var ownparkinsertRouter     = require('./routes/ownparkinsert');
 var leafletmapRouter        = require('./routes/leafletmap');
 
 var app = express();
@@ -34,15 +37,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
-app.use('/seoulparkinglot', seoulparkinglotRouter);
-app.use('/incheonparkinglot', incheonparkinglotRouter);
+app.use('/welcome', welcomeRouter);
+app.use('/signup', signupRouter);
+app.use('/nearbyparkinglot', nearbyparkinglotRouter);
+app.use('/destination', destinationRouter);
 app.use('/seoulcctv', seoulcctvRouter);
 app.use('/incheoncctv', incheoncctvRouter);
 app.use('/searchseoul', searchseoulRouter);
 app.use('/map', mapRouter);
 app.use('/ownpark', ownparkRouter);
+app.use('/ownparkinsert', ownparkinsertRouter);
 app.use('/leafletmap', leafletmapRouter);
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

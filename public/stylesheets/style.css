@@ -1,10 +1,9 @@
-.mainlogo {
-  color: white;
-  margin-left: 17%;
-}
-
 .favoritezone {
   margin-left: 35%;
+}
+
+.indexbd {
+  background-color: black;
 }
 
 input[id="menuicon"] {
@@ -18,6 +17,7 @@ input[id="menuicon"] + label {
   position:relative;
   cursor:pointer;
   float:right;
+  margin-top: 100px;
 }
 
 input[id="menuicon"] + label span {
@@ -97,7 +97,7 @@ input[id="menuicon"]:checked + label + div {
 
 /* 로그인 페이지 css*/
 
-.loginbd{
+/*.loginbd{
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -379,7 +379,7 @@ transition: all 250ms linear;
 height: 26px;
 width: auto;
 display: block;
-}
+}*/
 
 
 /* 서울주차장 지도 내위치 버튼*/

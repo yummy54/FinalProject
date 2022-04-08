@@ -8137,8 +8137,8 @@ body {
   font-size: 16px;
   line-height: 1.8;
   font-weight: normal;
-  background: #2b3035;
-  color: gray; }
+  background-color: black;
+}
 
 a {
   -webkit-transition: .3s all ease;
@@ -8172,8 +8172,11 @@ h1, h2, h3, h4, h5,
 
 .heading-section {
   font-size: 50px;
+  text-align: center;
   font-family: 'Black Han Sans', sans-serif;
-  color: #D98E0D; }
+  color: #D98E0D; 
+  margin-top: -200;
+}
 
 .img {
   background-size: cover;

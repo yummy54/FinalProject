@@ -35,9 +35,8 @@ var IncheonParkingSchema = mongoose.Schema({
        <meta charset="utf-8">
        <link rel="stylesheet" href="stylesheets/table.css">
        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script>
     function openpopup(i) {
@@ -52,11 +51,12 @@ var IncheonParkingSchema = mongoose.Schema({
   </script>
   </head>
     <body>
+    <a href="/"><img src="images/parkinglogo.png" width="300" height="300"></a>
+    <h2 class="heading-section">목적지 주변 주차장</h2>
     <section class="ftco-section">
   <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-6 text-center mb-5">
-              <h2 class="heading-section">인천 주차장</h2>
           </div>
         </div>
        <div class="row">

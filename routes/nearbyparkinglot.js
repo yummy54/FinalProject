@@ -35,10 +35,9 @@ router.get('/', function(req, res, next) {
        <title>Result</title>
        <meta charset="utf-8">
        <link rel="stylesheet" href="stylesheets/table.css">
-       <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'> 
+	     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script>
     function openpopup(i) {
@@ -53,11 +52,12 @@ router.get('/', function(req, res, next) {
   </script>
   </head>
     <body>
+    <a href="/"><img src="images/parkinglogo.png" width="300" height="300"></a>
+    <h2 class="heading-section">주변 주차장</h2>
     <section class="ftco-section">
   <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-6 text-center mb-5">
-              <h2 class="heading-section">서울 주차장</h2>
           </div>
         </div>
        <div class="row">
@@ -69,6 +69,7 @@ router.get('/', function(req, res, next) {
                   <th>주차장명   </th>
                   <th>주차장 주소</th>
                   <th>동         </th>
+                  <th> </th>
                 </tr>
               </thead>
               `;
@@ -116,6 +117,7 @@ router.get('/', function(req, res, next) {
                               <td style="cursor:pointer;" onclick="openpopup(${i});">${docs[i]['name']}</td>
                               <td>${docs[i]['address']}</td>
                               <td>${docs[i]['dong']}</td>
+                              <td><a href="#"><img src="images/heart.png" width="20" height="20"></a></td>
                             </tr>
                           </tbody>
                   </div>
