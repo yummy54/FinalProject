@@ -69,7 +69,6 @@ router.get('/', function(req, res, next) {
                   <th>주차장명   </th>
                   <th>주차장 주소</th>
                   <th>동         </th>
-                  <th> </th>
                 </tr>
               </thead>
               `;
@@ -107,6 +106,9 @@ router.get('/', function(req, res, next) {
                         <div class="mappage">
                           <a href="/map">지도보기</a>
                         </div>
+                        <div class="like">
+                        <a href="#"><img src="images/heart.png" width="20" height="20"></a>
+                        </div>
                     <div class="head">
                       <div class="btn-close" onclick="closepopup();"></div>
                     </div>
@@ -117,7 +119,6 @@ router.get('/', function(req, res, next) {
                               <td style="cursor:pointer;" onclick="openpopup(${i});">${docs[i]['name']}</td>
                               <td>${docs[i]['address']}</td>
                               <td>${docs[i]['dong']}</td>
-                              <td><a href="#"><img src="images/heart.png" width="20" height="20"></a></td>
                             </tr>
                           </tbody>
                   </div>

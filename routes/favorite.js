@@ -11,17 +11,16 @@ router.get('/', function(req, res, next) {
            <meta http-equiv="X-UA-Compatible" content="IE=edge">
            <meta name="viewport" content="width=device-width, initial-scale=1.0">
            <title>Document</title>
-           <link rel="stylesheet" href="stylesheets/ownparktable.css">
            <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'> 
 	         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-           <link rel="stylesheet" href="stylesheets/ownparkpage.css">
+           <link rel="stylesheet" href="stylesheets/favoritepage.css">
            <link rel="stylesheet" href="stylesheets/button.css">
            <link rel="stylesheet" href="stylesheets/checkbox.css">
        </head>
        <body>
        <a href="/"><img src="images/parkinglogo.png" width="300" height="300"></a>
           <center>
-            <img src="images/ownparklogo.png" width="300" height="300" style="margin-top: -250px">
+            <img src="images/favoritelogo.png" width="300" height="300" style="margin-top: -250px">
           </center>
        <section class="ftco-section">
        <div class="container">
@@ -40,8 +39,7 @@ router.get('/', function(req, res, next) {
                         </div></th>
                        <th>No.        </th>
                        <th>주차장명   </th>
-                       <th>기본요금   </th>
-                       <th>시간       </th>
+                       <th>주소   </th>
                      </tr>
                    </thead>
                    </table>
@@ -49,11 +47,9 @@ router.get('/', function(req, res, next) {
               </div>
           </div>
           
-          <center>
-            <a href="/ownparkinsert" class="btn btn-1">추가</a>
-            <a href="/update" class="btn btn-1">수정</a>
-          </center>
-                   
+           <center>           
+              <a href="#" class="btn btn-1">삭제</a>
+           </center>  
         </body>
        </html>
           `;

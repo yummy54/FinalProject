@@ -25,11 +25,11 @@ var FindParkingSchema = mongoose.Schema({
 var FindParking = mongoose.model('FindParking', FindParkingSchema);
 
 router.post('/', function(req, res, next) {
-  var dong = req.body.result;
-  /*console.log(req.result)
+  var dong = req.body.dong;
+  /*console.log(req.result)*/
   console.log(req.body.dong)
 
-  console.log(dong)*/
+ /* console.log(dong)*/
   FindParking.find({'dong' : dong},{_id : 0},function(err,docs){
     if(err) console.log('err');
     var template = `

@@ -10,8 +10,9 @@ var usersRouter             = require('./routes/users');
 var loginRouter             = require('./routes/login');
 var welcomeRouter           = require('./routes/welcome');
 var signupRouter            = require('./routes/signup');
+var mypageRouter            = require('./routes/mypage');
 var nearbyparkinglotRouter  = require('./routes/nearbyparkinglot');
-var destinationRouter    = require('./routes/destination');
+var destinationRouter       = require('./routes/destination');
 var seoulcctvRouter         = require('./routes/seoulcctv');
 var incheoncctvRouter       = require('./routes/incheoncctv');
 var searchseoulRouter       = require('./routes/searchseoul');
@@ -19,6 +20,8 @@ var mapRouter               = require('./routes/map');
 var ownparkRouter           = require('./routes/ownpark');
 var ownparkinsertRouter     = require('./routes/ownparkinsert');
 var leafletmapRouter        = require('./routes/leafletmap');
+var favoriteRouter          = require('./routes/favorite');
+var updateRouter            = require('./routes/update');
 
 var app = express();
 app.use(bodyParser.json())
@@ -39,6 +42,7 @@ app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/welcome', welcomeRouter);
 app.use('/signup', signupRouter);
+app.use('/mypage', mypageRouter);
 app.use('/nearbyparkinglot', nearbyparkinglotRouter);
 app.use('/destination', destinationRouter);
 app.use('/seoulcctv', seoulcctvRouter);
@@ -48,6 +52,8 @@ app.use('/map', mapRouter);
 app.use('/ownpark', ownparkRouter);
 app.use('/ownparkinsert', ownparkinsertRouter);
 app.use('/leafletmap', leafletmapRouter);
+app.use('/favorite', favoriteRouter);
+app.use('/update', updateRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
