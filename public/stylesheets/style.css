@@ -430,6 +430,8 @@ display: block;
   white-space: nowrap;
   margin-top: 25%;
   margin-left: 30%;
+  margin-top: 50px;
+  z-index: 1;
 }
 
 .container-4 input#search{
@@ -444,6 +446,8 @@ display: block;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  margin-top: 2px;
+  z-index: 1;
 }
 
 .container-4 input#search::-webkit-input-placeholder {
@@ -541,4 +545,11 @@ display: block;
   z-index: 3;
 }*/
 
+.searching {
+  margin-bottom: 50px;
+}
 
+.mapzone {
+  margin-left: 335px;
+  margin-top: -45px;
+}

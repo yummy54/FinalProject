@@ -81,7 +81,6 @@ router.get('/', function(req, res, next){
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""
   />
-
   <!-- Make sure you put this AFTER Leaflet's CSS -->
   <script
     src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
@@ -114,7 +113,6 @@ router.get('/', function(req, res, next){
         accessToken: "pk.eyJ1IjoibGVlc2V1bmdzb28iLCJhIjoiY2wxbHJmcXlkMGNoejNkcXVyeHI2dmUwOCJ9.t5zcX0VGgTFsu9rFNsxYuw",
       }
     ).addTo(mymap);
-
     var greenIcon = new L.Icon({
       iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
       shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -123,7 +121,6 @@ router.get('/', function(req, res, next){
       popupAnchor: [1, -34],
       shadowSize: [41, 41]
     });
-
     var marker = L.marker([37.50420793, 127.010337], {icon: greenIcon}).addTo(mymap);`
 
     /*for(var i=0;i<docs.length;i++){

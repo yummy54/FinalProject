@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const CircularJSON = require('circular-json');
 const request = require('request');
 
-var IncheonParkingSchema = mongoose.Schema({
+var DestinationSchema = mongoose.Schema({
     name:String, //주차장명
     address:String, // 주차장 주소
     dong:String,
@@ -20,13 +20,13 @@ var IncheonParkingSchema = mongoose.Schema({
     mpf:String, // 한달 주차 요금
   },
     {
-      collection : 'incheon'
+      collection : 'destination'
   });
 
-  var IncheonParking = mongoose.model('IncheonParking', IncheonParkingSchema);
+  var Destination = mongoose.model('Destination', DestinationSchema);
 
   router.get('/', function(req, res, next) {
-    IncheonParking.find({},{_id : 0},function(err,docs){
+    Destination.find({},{_id : 0},function(err,docs){
          if(err) console.log('err');
          var template = `
          <html>
@@ -34,8 +34,10 @@ var IncheonParkingSchema = mongoose.Schema({
        <title>Result</title>
        <meta charset="utf-8">
        <link rel="stylesheet" href="stylesheets/table.css">
+       <link rel="stylesheet" href="stylesheets/destsearch.css">
        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 	     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script>
@@ -53,6 +55,10 @@ var IncheonParkingSchema = mongoose.Schema({
     <body>
     <a href="/"><img src="images/parkinglogo.png" width="300" height="300"></a>
     <h2 class="heading-section">목적지 주변 주차장</h2>
+    <center>
+    <input type="text" placeholder="Search">
+    <button>검색</button>
+    </center>
     <section class="ftco-section">
   <div class="container">
         <div class="row justify-content-center">
