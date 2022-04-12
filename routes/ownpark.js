@@ -16,7 +16,8 @@ router.get('/', function(req, res, next) {
 	         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
            <link rel="stylesheet" href="stylesheets/ownparkpage.css">
            <link rel="stylesheet" href="stylesheets/button.css">
-           <link rel="stylesheet" href="stylesheets/checkbox.css">
+           <link rel="stylesheet" href="stylesheets/.css">
+           <link rel="stylesheet" href="stylesheets/ownparkbutton.css">
        </head>
        <body>
        <a href="/"><img src="images/parkinglogo.png" width="300" height="300"></a>
@@ -34,21 +35,37 @@ router.get('/', function(req, res, next) {
                    <table class="table table-bordered table-dark table-hover">
                    <thead>
                      <tr>
-                       <th><div class="checkbox-group">
-                       <input type="checkbox" id="custom-checkbox" class="custom-checkbox">
-                       <span class="custom-checkbox-span" tabindex="0"></span>
-                        </div></th>
                        <th>No.        </th>
                        <th>주차장명   </th>
                        <th>기본요금   </th>
                        <th>시간       </th>
+                       <th></th>
+                       <th></th>
                      </tr>
                    </thead>
+                    <tr>
+                      <th>1</th>
+                      <th>현대백화점</th>
+                      <th>1000원</th>
+                      <th>5분</th>
+                      <th><button class="tablebtn">수정</button></th>
+                      <th><button class="tablebtn">삭제</button></th>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <th>롯데백화점</th>
+                      <th>2000원</th>
+                      <th>5분</th>
+                      <th><button class="tablebtn">수정</button></th>
+                      <th><button class="tablebtn">삭제</button></th>
+                    </tr>
+                  }
+                  `;
+                  template +=`
                    </table>
                  </div>
               </div>
           </div>
-          
           <center>
             <a href="/ownparkinsert" class="btn btn-1">추가</a>
             <a href="/update" class="btn btn-1">수정</a>
