@@ -546,11 +546,16 @@ display: block;
 }*/
 
 .searching {
-  margin-bottom: 50px;
+  margin-bottom: 75px;
   margin-left: 250px;
 }
 
-.mapzone {
-  margin-left: 550px;
-  margin-top: -45px;
+.destination_mapzone {
+  margin-left: 425px;
+  margin-top: -67px;
+}
+
+.nearbyparkinglot_mapzone {
+  margin-left: 150px;
+  margin-top: -150px;
 }

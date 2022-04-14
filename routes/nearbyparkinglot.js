@@ -47,8 +47,15 @@ router.get('/', function(req, res, next) {
        <title>Result</title>
        <meta charset="utf-8">
        <link rel="stylesheet" href="stylesheets/table.css">
+       <link rel="stylesheet" href="stylesheets/destsearch.css">
        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 	     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="stylesheets/style.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     function openpopup(i) {
@@ -83,8 +90,8 @@ router.get('/', function(req, res, next) {
                     <!-- ifame 태그에서, src(경로) 지정해줄 때, 완벽한 경로 /map/map.html로 지정하면 get으로 처리받을 수 없다 -->
                   </section>
               </div>
-              <div class="mapzone">
-              <iframe name=targetURL class="iframe-preview center" width="50%" height="500" style="border:none;" src="/map/maptest" scrolling="no">
+              <div class="nearbyparkinglot_mapzone">
+              <iframe name=targetURL class="iframe-preview center" width="800" height="500" style="border:none;" src="/map/maptest" scrolling="no">
               </iframe>
               `;
               template += `

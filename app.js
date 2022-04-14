@@ -3,8 +3,8 @@ const express = require('express');
 const http = require('http');
 const https = require('https');
 const fs = require('fs');
-const HTTP_PORT = 443;
-const HTTPS_PORT = 3000;
+const HTTP_PORT = 3000;
+const HTTPS_PORT = 443;
 const options = {
   key : fs.readFileSync('./rootca.key'),
   cert : fs.readFileSync('./rootca.crt')
@@ -26,7 +26,7 @@ app.use(session({
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-// app.set('port', process.env.PORT || 3000)
+app.set('port', process.env.PORT || 3000)
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -65,7 +65,7 @@ app.use('/ownparkupdate', ownparkupdate);
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://3.35.153.238:27017/finalproject');
 
-https.createServer(options, app).listen(HTTPS_PORT);
+// https.createServer(options, app).listen(HTTPS_PORT);
 
 app.listen(app.get('port'), () =>{
 	console.log('3000 Port : 서버 실행 중')
