@@ -547,9 +547,11 @@ display: block;
 
 .searching {
   margin-bottom: 50px;
+  margin-left: 250px;
 }
 
 .mapzone {
-  margin-left: 335px;
+  margin-left: 550px;
   margin-top: -45px;
 }
+

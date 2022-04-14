@@ -13,9 +13,6 @@ var signupRouter            = require('./routes/signup');
 var mypageRouter            = require('./routes/mypage');
 var nearbyparkinglotRouter  = require('./routes/nearbyparkinglot');
 var destinationRouter       = require('./routes/destination');
-var seoulcctvRouter         = require('./routes/seoulcctv');
-var incheoncctvRouter       = require('./routes/incheoncctv');
-var searchseoulRouter       = require('./routes/searchseoul');
 var mapRouter               = require('./routes/map');
 var ownparkRouter           = require('./routes/ownpark');
 var ownparkinsertRouter     = require('./routes/ownparkinsert');
@@ -45,9 +42,6 @@ app.use('/signup', signupRouter);
 app.use('/mypage', mypageRouter);
 app.use('/nearbyparkinglot', nearbyparkinglotRouter);
 app.use('/destination', destinationRouter);
-app.use('/seoulcctv', seoulcctvRouter);
-app.use('/incheoncctv', incheoncctvRouter);
-app.use('/searchseoul', searchseoulRouter);
 app.use('/map', mapRouter);
 app.use('/ownpark', ownparkRouter);
 app.use('/ownparkinsert', ownparkinsertRouter);
@@ -71,7 +65,7 @@ app.use(function(err, req, res, next) {
 });
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/final_api');
+mongoose.connect('mongodb://3.35.153.238:27017/final_api');
 
 app.listen(app.get('port'), () =>{
 	console.log('5000 Port : 서버 실행 중')
